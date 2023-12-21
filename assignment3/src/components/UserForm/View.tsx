@@ -1,12 +1,6 @@
 import { ChangeEvent } from "react";
 import "./index.css";
 
-// interface User {
-//   name: string;
-//   password: string;
-//   isUsernameDuplicate: boolean;
-// }
-
 interface ViewProps {
   index: number;
   username: string;

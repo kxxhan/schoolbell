@@ -1,10 +1,4 @@
 import Container from "./Container";
-
-// interface User {
-//   name: string;
-//   password: string;
-//   isUsernameDuplicate: boolean;
-// }
 interface iProps {
   index: number;
   username: string;

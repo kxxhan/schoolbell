@@ -1,12 +1,6 @@
 import { ChangeEvent, useEffect, useState } from "react";
 import View from "./View";
 
-// interface User {
-//   name: string;
-//   password: string;
-//   isUsernameDuplicate: boolean;
-// }
-
 interface ContainerProps {
   index: number;
   username: string;
