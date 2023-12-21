@@ -1,5 +1,3 @@
-// DP를 적용시키는것도 생각해보자.
-
 function solve(arr) {
   arr.sort(function (a, b) {
     return b - a;
@@ -13,7 +11,7 @@ function solve(arr) {
     else secondNum = secondNum * 10 + arr[i];
   }
 
-  console.log(firstNum, secondNum);
+  console.log("곱이 가장 큰 조합 : ", firstNum, secondNum);
 }
 
 inputArray = [1, 3, 5, 7, 9];
