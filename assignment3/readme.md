@@ -1,9 +1,7 @@
 # Install
----
 
-``` cmd
+```cmd
 npm install
 
 npm start
 ```
-
