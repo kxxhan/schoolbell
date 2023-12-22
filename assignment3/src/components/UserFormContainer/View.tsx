@@ -39,6 +39,7 @@ function View({
               key={index}
               index={index}
               username={user.name}
+              password={user.password}
               isUsernameDuplicate={user.isUsernameDuplicate}
               changeUsername={changeUsername}
               changePassword={changePassword}

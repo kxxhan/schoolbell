@@ -4,6 +4,7 @@ import View from "./View";
 interface ContainerProps {
   index: number;
   username: string;
+  password: string;
   isUsernameDuplicate: boolean;
   changeUsername: (name: string, index: number) => void;
   changePassword: (pwd: string, index: number) => void;
@@ -13,6 +14,7 @@ interface ContainerProps {
 function Container({
   index,
   username,
+  password,
   isUsernameDuplicate,
   changeUsername,
   changePassword,
@@ -25,23 +27,18 @@ function Container({
   const handleNameInputChange = (
     event: ChangeEvent<HTMLInputElement>
   ): void => {
-    // if (event.target.value.length > 2)
     changeUsername(event.target.value, index);
   };
 
   const handlePwdInputChange = (event: ChangeEvent<HTMLInputElement>): void => {
-    if (event.target.value.length > 5)
-      changePassword(event.target.value, index);
+    changePassword(event.target.value, index);
   };
-
-  useEffect(() => {
-    console.log(1111);
-  }, [isUsernameDuplicate]);
 
   return (
     <View
       index={index}
       username={username}
+      password={password}
       isUsernameDuplicate={isUsernameDuplicate}
       handleClickDelete={handleClickDelete}
       handleNameInputChange={handleNameInputChange}

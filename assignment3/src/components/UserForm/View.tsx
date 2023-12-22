@@ -4,6 +4,7 @@ import "./index.css";
 interface ViewProps {
   index: number;
   username: string;
+  password: string;
   isUsernameDuplicate: boolean;
   handleClickDelete: () => void;
   handleNameInputChange: (event: ChangeEvent<HTMLInputElement>) => void;
@@ -12,6 +13,7 @@ interface ViewProps {
 function View({
   index,
   username,
+  password,
   isUsernameDuplicate,
   handleClickDelete,
   handleNameInputChange,
@@ -29,7 +31,8 @@ function View({
             <label htmlFor="username">Name</label>
             <input
               type="text"
-              id="username"
+              value={username}
+              className="username"
               name="username"
               minLength={3}
               onChange={handleNameInputChange}
@@ -47,7 +50,8 @@ function View({
             <label htmlFor="password">Password</label>
             <input
               type="password"
-              id="password"
+              value={password}
+              className="password"
               name="password"
               minLength={6}
               placeholder=""
